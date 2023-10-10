@@ -14,7 +14,8 @@ while True:
 
 
     if(esc == 1):
-        bib.insert("nomes.txt")
+        dic = {}
+        bib.insert("nomes.txt", dic)
         print("Dados inseridos")
 
     elif(esc == 2):

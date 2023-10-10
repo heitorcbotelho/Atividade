@@ -1,22 +1,17 @@
 def insert(file):
 
-
     arquivo = open(file, "a")
-    nome = input("Nome: ").capitalize()
+    dic["nome"] = input("Nome: ").capitalize()
     arquivo.write(f"{nome};")
-
 
     email = input("E-mail: ").lower()
     arquivo.write(f"{email};")
 
-
     salario = (input("Salário: R$"))
     arquivo.write(f"{salario};")
 
-
     datanasc = input("Data de nascimento: ")
     arquivo.write(f"{datanasc}\n")
-
 
     arquivo.close()
 
@@ -86,7 +81,7 @@ def somaNome(file, name):
     return s
     arquivo.close()
 
-
+#ARRUMAR DEPOIS
 def media(file, age):
     try:
         arquivo = open(file, "r")
