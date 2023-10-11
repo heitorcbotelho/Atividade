@@ -19,7 +19,7 @@ while True:
         print("Dados inseridos")
 
     elif(esc == 2):
-        bib.listar("nomes.txt")
+        print(bib.listar("nomes.txt"))
 
     elif(esc == 3):
         nome = input("Nome para buscar: ").capitalize()

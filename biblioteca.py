@@ -1,32 +1,25 @@
-def insert(file):
-
+def insert(file, dic):
     arquivo = open(file, "a")
-    dic["nome"] = input("Nome: ").capitalize()
-    arquivo.write(f"{nome};")
-
-    email = input("E-mail: ").lower()
-    arquivo.write(f"{email};")
-
-    salario = (input("Salário: R$"))
-    arquivo.write(f"{salario};")
-
-    datanasc = input("Data de nascimento: ")
-    arquivo.write(f"{datanasc}\n")
-
+    arquivo.write(f"{dic['nome']};")
+    arquivo.write(f"{dic['email']};")
+    arquivo.write(f"{dic['salario']};")
+    arquivo.write(f"{dic['datanasc']}\n")
     arquivo.close()
 
 def listar(file):
     arquivo = open(file, "r")
     linhas = arquivo.readlines()
-    for c in range(0, len(linhas)):
+    vetor = [""] * len(linhas)
+    for c in range(0, len(vetor)):
         dados = linhas[c].replace("\n", "")
         dados = dados.split(";")
-        print(f"Nome: {dados[0]}")
-        print(f"E-mail: {dados[1]}")
-        print(f"Salário: R${dados[2]}")
-        print(f"Data de nascimento: {dados[3]}")
-        print()
+        vetor[c] = {}
+        vetor[c]["nome"] = dados[0]
+        vetor[c]["email"] = dados[1]
+        vetor[c]["salario"] = dados[2]
+        vetor[c]["datanasc"] = dados[3]
     arquivo.close()
+    return vetor
 
 def search(file, name):
     encontrado = False
