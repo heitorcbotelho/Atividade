@@ -23,7 +23,7 @@ while True:
 
     elif(esc == 3):
         nome = input("Nome para buscar: ").capitalize()
-        bib.search("nomes.txt", nome)
+        print(bib.search("nomes.txt", nome))
    
     elif(esc == 4):
         s = bib.soma("nomes.txt")

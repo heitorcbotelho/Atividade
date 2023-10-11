@@ -25,16 +25,18 @@ def search(file, name):
     encontrado = False
     arquivo = open(file, "r")
     linhas = arquivo.readlines()
-    for c in range(0, len(linhas)):
+    vetor = [""] * len(linhas)
+    for c in range(0, len(vetor)):
         dados = linhas[c].replace("\n", "")
         dados = dados.split(";")
         if (name in dados[0]):
-            print(f"Nome: {dados[0]}")
-            print(f"E-mail: {dados[1]}")
-            print(f"Salário: R${dados[2]}")
-            print(f"Data de nascimento: {dados[3]}")
-            print()
+            vetor[c] = {}
+            vetor[c]["nome"] = dados[0]
+            vetor[c]["email"] = dados[1]
+            vetor[c]["salario"] = dados[2]
+            vetor[c]["datanasc"] = dados[3]
             encontrado = True
+            return vetor
     if (encontrado == False):
         print("Nome não encontrado")
     arquivo.close()
@@ -112,4 +114,3 @@ def media(file, age):
         print("Arquivo não encontrado.")
     except Exception as e:
         print(f"Ocorreu um erro: {e}")
-
