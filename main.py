@@ -18,7 +18,13 @@ while True:
 
     if(esc == 1):
         dic = {}
+        
+        dic["nome"] = input("Nome: ").capitalize()
+        dic["email"] = input("E-mail: ")
+        dic["salario"] = float(input("Salario: "))
+        dic["datanasc"] = input("Data de nascimento: ")
         bib.insert("nomes.txt", dic)
+
         print("Dados inseridos")
 
     elif(esc == 2):

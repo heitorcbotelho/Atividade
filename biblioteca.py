@@ -18,9 +18,7 @@ def listar(file):
         vetor[c]["nome"] = dados[0]
         vetor[c]["email"] = dados[1]
         vetor[c]["salario"] = float(dados[2])
-         # Convertendo a data de nascimento para um objeto datetime (obrigado chatGPT)
-        data_nascimento = datetime.strptime(dados[3], "%d/%m/%Y")
-        vetor[c]["datanasc"] = data_nascimento
+        vetor[c]["datanasc"] = dados[3]
 
     arquivo.close()
     return vetor

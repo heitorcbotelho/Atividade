@@ -2,3 +2,5 @@ Pedro cabron;cabron@gmail.com;10000;01/12/2000
 Jonas brotherum;brotherum@gmail.com;3000;01/12/2000
 Marcio;marcinhoreideas@gmail.com;900.90;01/09/1999
 Marcio;marciano@gmail.com;200.90;01/09/1999
+Cristiano ronaldo;cr7@gmail.com;10000000000.0;02/08/1992
+A;a@;10.0;01/01/0001
